@@ -1,0 +1,181 @@
+/* ===============================
+   1. RESET Y CONFIGURACIÓN GLOBAL
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf2;
+  color: #333;
+  line-height: 1.6;
+}
+/* ===== MARCA DE AGUA (DECORATIVA GLOBAL) ===== */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  background-image: url('images/logo/little-lemon-mono.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  pointer-events: none; /* <- para que no interfiera con clics */
+}
+
+/* ===============================
+   2. ENCABEZADO (HEADER)
+================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4ce14; /* color amarillo original */
+  padding: 20px 40px;
+}
+
+header img.logo {
+  width: 150px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #495e57;
+}
+
+/* ===============================
+   3. SECCIÓN HERO
+================================= */
+.hero {
+  background-image: url('images/hero/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #495e57;
+  color: white;
+}
+
+/* ===============================
+   4. SECCIÓN DE FEATURES (3 COLUMNAS)
+================================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 60px;
+}
+
+.features article {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.features article:hover {
+  transform: translateY(-5px);
+}
+
+.features img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.features h2 {
+  margin: 15px;
+  color: #495e57;
+}
+
+.features p {
+  margin: 0 15px 20px;
+}
+
+/* ===============================
+   5. PIE DE PÁGINA (FOOTER)
+================================= */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #495e57;
+  color: white;
+  padding: 20px 40px;
+}
+
+footer img {
+  width: 90px;
+}
+
+/* ===============================
+   6. RESPONSIVE DESIGN
+================================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
