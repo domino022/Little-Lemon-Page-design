@@ -19,7 +19,7 @@ body::after {
   right: 10px;
   width: 100px;
   height: 100px;
-  background-image: url('images/logo/little-lemon-mono.png');
+  background-image: url('./images/logo/little-lemon-mono.png');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.1;
@@ -106,7 +106,7 @@ body.scrolled header img.logo {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url('images/hero/banner.jpg'); /* capa oscura sobre imagen */
+    url('./images/hero/banner.jpg'); /* capa oscura sobre imagen */
 
   background-size: cover;
   background-position: center;
