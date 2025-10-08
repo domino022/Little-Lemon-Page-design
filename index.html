@@ -10,20 +10,28 @@
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <a href="index.html" class="logo-link">
+ <header>
+  <a href="index.html" class="logo-link">
     <img src="images/logo/little-lemon-logo.png" alt="Little Lemon logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </a>
+
+  <!-- Botón del menú hamburguesa -->
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- MAIN CONTENT -->
   <main>
@@ -69,6 +77,8 @@
   </footer>
 </body>
 </html>
+
+<!--script optional header-->>
 <script>
   window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
@@ -77,5 +87,15 @@
     } else {
       header.classList.remove('scrolled');
     }
+  });
+</script>
+<!--Script responiive menu hamburguesa-->>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
   });
 </script>
