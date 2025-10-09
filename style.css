@@ -55,7 +55,7 @@ header::before {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 30px;  
   margin-right: 10px;
 }
 
@@ -236,6 +236,42 @@ header.scrolled {
 }
 
 /* Responsive */
+/* Ocultar el botón hamburguesa en escritorio */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Estilo general de las barras del icono */
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Mostrar el botón hamburguesa solo en pantallas pequeñas */
+/*@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}*/
+
 
 /* === ESTILOS RESPONSIVE PARA LITTLE LEMON === */
 
